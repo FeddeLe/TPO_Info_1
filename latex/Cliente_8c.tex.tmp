@@ -1,0 +1,20 @@
+\hypertarget{Cliente_8c}{}\section{Cliente.\+c File Reference}
+\label{Cliente_8c}\index{Cliente.\+c@{Cliente.\+c}}
+{\ttfamily \#include \char`\"{}Header.\+h\char`\"{}}\\*
+Include dependency graph for Cliente.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Cliente_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Cliente.\+c@{Cliente.\+c}!main@{main}}
+\index{main@{main}!Cliente.\+c@{Cliente.\+c}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{Cliente_8c_a840291bc02cba5474a4cb46a9b9566fe}{}\label{Cliente_8c_a840291bc02cba5474a4cb46a9b9566fe}

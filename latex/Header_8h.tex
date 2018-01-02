@@ -1,0 +1,275 @@
+\hypertarget{Header_8h}{}\section{Header.\+h File Reference}
+\label{Header_8h}\index{Header.\+h@{Header.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$sys/socket.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$sys/wait.\+h$>$}\\*
+{\ttfamily \#include $<$netinet/in.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+Include dependency graph for Header.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structProducto}{Producto}
+\item 
+struct \hyperlink{structNode}{Node}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structProducto}{Producto} \hyperlink{Header_8h_a1046d59a6d0e849f416d47596c66c0c0}{item}
+\item 
+typedef struct \hyperlink{structNode}{Node} \hyperlink{Header_8h_a0459044a77a60acb0e17b56c55281230}{nodo}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Header_8h_a018f31f5c1c3159d7cf27cfb7755d008}{Log\+\_\+\+In} (char $\ast$, char $\ast$, int)
+\item 
+int \hyperlink{Header_8h_ac8b4dd67c99d387ff307745f9cb50ced}{Create\+\_\+\+User} (char $\ast$, char $\ast$)
+\item 
+int \hyperlink{Header_8h_a6aca0563dce5f4c5cd695e590edccbba}{String\+\_\+\+Compare} (char $\ast$, char $\ast$)
+\item 
+int \hyperlink{Header_8h_ae2e71437b7ecc93ff69fc1ef48233c23}{String\+\_\+\+Lenght} (char $\ast$)
+\item 
+void \hyperlink{Header_8h_afdfd4510823d11359a402a671e32fcd6}{String\+\_\+\+Copy} (char $\ast$Str\+\_\+\+Inicio, char $\ast$Str\+\_\+\+Destino)
+\item 
+\hyperlink{Header_8h_a1046d59a6d0e849f416d47596c66c0c0}{item} $\ast$ \hyperlink{Header_8h_ad1dd79ef3f7a0cc98f74255feebe0410}{Buscar\+\_\+\+Producto} (char $\ast$)
+\item 
+int \hyperlink{Header_8h_a9a93d4c154794ca490fa0e21cc3d3e4c}{Agregar\+\_\+\+Producto} (char $\ast$, float, long int)
+\item 
+int \hyperlink{Header_8h_abe9e1fce964475237ce528f413f7e105}{Modificar\+\_\+\+Producto} (char $\ast$, float, long int)
+\item 
+int \hyperlink{Header_8h_a5e54bf61887c5d9ca15a34ee05c60a22}{Eliminar\+\_\+\+Producto} (char $\ast$)
+\item 
+void \hyperlink{Header_8h_a891a893ad3c69ad820750f2c7a650016}{Nuevo\+\_\+\+Nodo} (\hyperlink{Header_8h_a0459044a77a60acb0e17b56c55281230}{nodo} $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{Header.\+h@{Header.\+h}!item@{item}}
+\index{item@{item}!Header.\+h@{Header.\+h}}
+\subsubsection[{\texorpdfstring{item}{item}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Producto} {\bf item}}\hypertarget{Header_8h_a1046d59a6d0e849f416d47596c66c0c0}{}\label{Header_8h_a1046d59a6d0e849f416d47596c66c0c0}
+estructura con los atributos principales del producto sera declarada como \char`\"{}item\char`\"{} \index{Header.\+h@{Header.\+h}!nodo@{nodo}}
+\index{nodo@{nodo}!Header.\+h@{Header.\+h}}
+\subsubsection[{\texorpdfstring{nodo}{nodo}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Node} {\bf nodo}}\hypertarget{Header_8h_a0459044a77a60acb0e17b56c55281230}{}\label{Header_8h_a0459044a77a60acb0e17b56c55281230}
+estructura para el manejo de una lista simplemente enlazada 
+
+\subsection{Function Documentation}
+\index{Header.\+h@{Header.\+h}!Agregar\+\_\+\+Producto@{Agregar\+\_\+\+Producto}}
+\index{Agregar\+\_\+\+Producto@{Agregar\+\_\+\+Producto}!Header.\+h@{Header.\+h}}
+\subsubsection[{\texorpdfstring{Agregar\+\_\+\+Producto(char $\ast$, float, long int)}{Agregar_Producto(char *, float, long int)}}]{\setlength{\rightskip}{0pt plus 5cm}int Agregar\+\_\+\+Producto (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{nombre, }
+\item[{float}]{precio, }
+\item[{long int}]{stock}
+\end{DoxyParamCaption}
+)}\hypertarget{Header_8h_a9a93d4c154794ca490fa0e21cc3d3e4c}{}\label{Header_8h_a9a93d4c154794ca490fa0e21cc3d3e4c}
+Agregar nuevo producto al archivo de listado de productos 
+\begin{DoxyParams}{Parameters}
+{\em nombre} & nombre del nuevo producto \\
+\hline
+{\em precio} & precio \\
+\hline
+{\em stock} & stock disponible \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 1.\+Se agrego el producto 
+\end{DoxyReturn}
+\index{Header.\+h@{Header.\+h}!Buscar\+\_\+\+Producto@{Buscar\+\_\+\+Producto}}
+\index{Buscar\+\_\+\+Producto@{Buscar\+\_\+\+Producto}!Header.\+h@{Header.\+h}}
+\subsubsection[{\texorpdfstring{Buscar\+\_\+\+Producto(char $\ast$)}{Buscar_Producto(char *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item}$\ast$ Buscar\+\_\+\+Producto (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{nombre}
+\end{DoxyParamCaption}
+)}\hypertarget{Header_8h_ad1dd79ef3f7a0cc98f74255feebe0410}{}\label{Header_8h_ad1dd79ef3f7a0cc98f74255feebe0410}
+Busca un producto por nombre en el archivo de listado de productos 
+\begin{DoxyParams}{Parameters}
+{\em nombre} & nombre del producto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: devuelve el precio y el stock disponible del prodcuto dentro de una estructura del tipo \char`\"{}item\char`\"{} 
+\end{DoxyReturn}
+\index{Header.\+h@{Header.\+h}!Create\+\_\+\+User@{Create\+\_\+\+User}}
+\index{Create\+\_\+\+User@{Create\+\_\+\+User}!Header.\+h@{Header.\+h}}
+\subsubsection[{\texorpdfstring{Create\+\_\+\+User(char $\ast$, char $\ast$)}{Create_User(char *, char *)}}]{\setlength{\rightskip}{0pt plus 5cm}int Create\+\_\+\+User (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{u, }
+\item[{char $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{Header_8h_ac8b4dd67c99d387ff307745f9cb50ced}{}\label{Header_8h_ac8b4dd67c99d387ff307745f9cb50ced}
+Crear nuevo usuario (no administrador) 
+\begin{DoxyParams}{Parameters}
+{\em u} & nombre de usuario elegido \\
+\hline
+{\em p} & contraseña \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 0. El usuario ya existe -\/1. La clave tiene memos de 6 caracteres o no tiene letra mayuscula y algun numero
+\begin{DoxyEnumerate}
+\item Usuario creado 
+\end{DoxyEnumerate}
+\end{DoxyReturn}
+$<$ variable para contador
+
+$<$ cantidad de mayusculas
+
+$<$ cantidad de minusculas
+
+$<$ cantidad de numeros
+
+abrimos archivo de usuarios en modo lectura
+
+Leemos el archivo (hasta E\+OF) y vamos comparando con el usuario y contraseña pasados como parametros
+
+Vemos si el string de contraseña tiene menos de 6 caracteres
+
+Contamos cuantas mayusculas minusculas y numeros hay en la string de contraseña parametro comparando por A\+S\+C\+II
+
+Si se encontraron mayusculas minusculas y numeros se registrara el nuevo user en el archivo\index{Header.\+h@{Header.\+h}!Eliminar\+\_\+\+Producto@{Eliminar\+\_\+\+Producto}}
+\index{Eliminar\+\_\+\+Producto@{Eliminar\+\_\+\+Producto}!Header.\+h@{Header.\+h}}
+\subsubsection[{\texorpdfstring{Eliminar\+\_\+\+Producto(char $\ast$)}{Eliminar_Producto(char *)}}]{\setlength{\rightskip}{0pt plus 5cm}int Eliminar\+\_\+\+Producto (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{nombre}
+\end{DoxyParamCaption}
+)}\hypertarget{Header_8h_a5e54bf61887c5d9ca15a34ee05c60a22}{}\label{Header_8h_a5e54bf61887c5d9ca15a34ee05c60a22}
+Elimina un producto del archivo de listado de productos 
+\begin{DoxyParams}{Parameters}
+{\em nombre} & nombre del producto a eliminar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 1.\+Se eliminó 
+\end{DoxyReturn}
+\index{Header.\+h@{Header.\+h}!Log\+\_\+\+In@{Log\+\_\+\+In}}
+\index{Log\+\_\+\+In@{Log\+\_\+\+In}!Header.\+h@{Header.\+h}}
+\subsubsection[{\texorpdfstring{Log\+\_\+\+In(char $\ast$, char $\ast$, int)}{Log_In(char *, char *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}int Log\+\_\+\+In (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{u, }
+\item[{char $\ast$}]{p, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{Header_8h_a018f31f5c1c3159d7cf27cfb7755d008}{}\label{Header_8h_a018f31f5c1c3159d7cf27cfb7755d008}
+Logueo de usuario 
+\begin{DoxyParams}{Parameters}
+{\em u} & contiene el nombre de usuario \\
+\hline
+{\em p} & contiene la contraseña \\
+\hline
+{\em flag} & 1. usuario 2. admin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 1. encontro usuario 0. no encontro usuario
+\end{DoxyReturn}
+logueo de usuario 
+\begin{DoxyParams}{Parameters}
+{\em u} & contiene el nombre de usuario \\
+\hline
+{\em p} & contiene la contraseña \\
+\hline
+{\em flag} & 1. usurio 2. admin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 1. encontro usuario 0. no encontro usuario 
+\end{DoxyReturn}
+$<$ String para usuario
+
+$<$ String para contraseña
+
+$<$ FD para el archivo
+
+Abre archivo \char`\"{}\+Registered\+\_\+\+Users\char`\"{} en modo lectura
+
+Abre archivo \char`\"{}\+Registered\+\_\+admins\char`\"{} en modo lectura
+
+Leemos el archivo que abrimos anteriormente almacenando lo leido en las variables antes declaradas Las comparamos con los parametros pasados Leemos el archivo hasta encontrar el E\+OF (End Of File)\index{Header.\+h@{Header.\+h}!Modificar\+\_\+\+Producto@{Modificar\+\_\+\+Producto}}
+\index{Modificar\+\_\+\+Producto@{Modificar\+\_\+\+Producto}!Header.\+h@{Header.\+h}}
+\subsubsection[{\texorpdfstring{Modificar\+\_\+\+Producto(char $\ast$, float, long int)}{Modificar_Producto(char *, float, long int)}}]{\setlength{\rightskip}{0pt plus 5cm}int Modificar\+\_\+\+Producto (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{nombre, }
+\item[{float}]{precio, }
+\item[{long int}]{stock}
+\end{DoxyParamCaption}
+)}\hypertarget{Header_8h_abe9e1fce964475237ce528f413f7e105}{}\label{Header_8h_abe9e1fce964475237ce528f413f7e105}
+Modifica el precio o el stock de un producto en el archivo de listado de productos 
+\begin{DoxyParams}{Parameters}
+{\em nombre} & nombre del producto a modificar \\
+\hline
+{\em precio} & nuevo precio \\
+\hline
+{\em stock} & nuevo stock \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 1.\+Se modifico 0.\+Error, no existe el producto 
+\end{DoxyReturn}
+\index{Header.\+h@{Header.\+h}!Nuevo\+\_\+\+Nodo@{Nuevo\+\_\+\+Nodo}}
+\index{Nuevo\+\_\+\+Nodo@{Nuevo\+\_\+\+Nodo}!Header.\+h@{Header.\+h}}
+\subsubsection[{\texorpdfstring{Nuevo\+\_\+\+Nodo(nodo $\ast$)}{Nuevo_Nodo(nodo *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Nuevo\+\_\+\+Nodo (
+\begin{DoxyParamCaption}
+\item[{{\bf nodo} $\ast$}]{auxiliar}
+\end{DoxyParamCaption}
+)}\hypertarget{Header_8h_a891a893ad3c69ad820750f2c7a650016}{}\label{Header_8h_a891a893ad3c69ad820750f2c7a650016}
+Crear nuevo nodo de una lista simplemente enlazada 
+\begin{DoxyParams}{Parameters}
+{\em auxiliar} & direccion de comienzo de la lista \\
+\hline
+\end{DoxyParams}
+\index{Header.\+h@{Header.\+h}!String\+\_\+\+Compare@{String\+\_\+\+Compare}}
+\index{String\+\_\+\+Compare@{String\+\_\+\+Compare}!Header.\+h@{Header.\+h}}
+\subsubsection[{\texorpdfstring{String\+\_\+\+Compare(char $\ast$, char $\ast$)}{String_Compare(char *, char *)}}]{\setlength{\rightskip}{0pt plus 5cm}int String\+\_\+\+Compare (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s1, }
+\item[{char $\ast$}]{s2}
+\end{DoxyParamCaption}
+)}\hypertarget{Header_8h_a6aca0563dce5f4c5cd695e590edccbba}{}\label{Header_8h_a6aca0563dce5f4c5cd695e590edccbba}
+Compara dos strings 
+\begin{DoxyParams}{Parameters}
+{\em s1} & primer string a comparar \\
+\hline
+{\em s2} & segunda string a comparar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 1.\+Iguales 0.\+Distintas 
+\end{DoxyReturn}
+\char`\"{}\+Medimos\char`\"{} el tamaño de la primer string parametro y luego la segunda Sabremos primero si difieren en tamaño Luego si coinciden en tamaño procedemos a comparar caracter por caracter\index{Header.\+h@{Header.\+h}!String\+\_\+\+Copy@{String\+\_\+\+Copy}}
+\index{String\+\_\+\+Copy@{String\+\_\+\+Copy}!Header.\+h@{Header.\+h}}
+\subsubsection[{\texorpdfstring{String\+\_\+\+Copy(char $\ast$\+Str\+\_\+\+Inicio, char $\ast$\+Str\+\_\+\+Destino)}{String_Copy(char *Str_Inicio, char *Str_Destino)}}]{\setlength{\rightskip}{0pt plus 5cm}void String\+\_\+\+Copy (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{Str\+\_\+\+Inicio, }
+\item[{char $\ast$}]{Str\+\_\+\+Destino}
+\end{DoxyParamCaption}
+)}\hypertarget{Header_8h_afdfd4510823d11359a402a671e32fcd6}{}\label{Header_8h_afdfd4510823d11359a402a671e32fcd6}
+Copiar string en otra string 
+\begin{DoxyParams}{Parameters}
+{\em Str\+\_\+\+Inicio} & string a copiar \\
+\hline
+{\em Str\+\_\+\+Destino} & buffer donde se copiara string Inicio \\
+\hline
+\end{DoxyParams}
+Copiamos caracter a caracter hasta encontrar el N\+U\+LL en la string de inicio\index{Header.\+h@{Header.\+h}!String\+\_\+\+Lenght@{String\+\_\+\+Lenght}}
+\index{String\+\_\+\+Lenght@{String\+\_\+\+Lenght}!Header.\+h@{Header.\+h}}
+\subsubsection[{\texorpdfstring{String\+\_\+\+Lenght(char $\ast$)}{String_Lenght(char *)}}]{\setlength{\rightskip}{0pt plus 5cm}int String\+\_\+\+Lenght (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{Header_8h_ae2e71437b7ecc93ff69fc1ef48233c23}{}\label{Header_8h_ae2e71437b7ecc93ff69fc1ef48233c23}
+Tamaño de string 
+\begin{DoxyParams}{Parameters}
+{\em str} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: el tamaño de la string 
+\end{DoxyReturn}
+Recorremos la string pasada como parametro hasta encontrar el caracter del N\+U\+LL (\textquotesingle{}\textbackslash{}0\textquotesingle{})

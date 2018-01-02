@@ -1,0 +1,232 @@
+\hypertarget{Funciones_8c}{}\section{Funciones.\+c File Reference}
+\label{Funciones_8c}\index{Funciones.\+c@{Funciones.\+c}}
+{\ttfamily \#include \char`\"{}Header.\+h\char`\"{}}\\*
+Include dependency graph for Funciones.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Funciones_8c_a7411b1e652bab68e2b3b6c3cd724dd10}{Log\+\_\+\+In} (char $\ast$u, char $\ast$p, int flag)
+\item 
+int \hyperlink{Funciones_8c_ae2a0aa4e2abfb43f252200d0d7610a78}{Create\+\_\+\+User} (char $\ast$u, char $\ast$p)
+\item 
+int \hyperlink{Funciones_8c_a00aad8f30618c805a748318dbd9513c8}{String\+\_\+\+Compare} (char $\ast$s1, char $\ast$s2)
+\item 
+int \hyperlink{Funciones_8c_a1348579deed84307ae6e407c1938152a}{String\+\_\+\+Lenght} (char $\ast$str)
+\item 
+void \hyperlink{Funciones_8c_afdfd4510823d11359a402a671e32fcd6}{String\+\_\+\+Copy} (char $\ast$Str\+\_\+\+Inicio, char $\ast$Str\+\_\+\+Destino)
+\item 
+\hyperlink{Header_8h_a1046d59a6d0e849f416d47596c66c0c0}{item} $\ast$ \hyperlink{Funciones_8c_aa3c2c9d160c270ed31ebb1ed255cdfc2}{Buscar\+\_\+\+Producto} (char $\ast$nombre)
+\item 
+int \hyperlink{Funciones_8c_a0f25cf3b659d0725f2d3ebc186541ed3}{Agregar\+\_\+\+Producto} (char $\ast$nombre, float precio, long int stock)
+\item 
+int \hyperlink{Funciones_8c_a15ec9d761dcc3cf972ccdcf652426960}{Modificar\+\_\+\+Producto} (char $\ast$nombre, float precio, long int stock)
+\item 
+int \hyperlink{Funciones_8c_a3b5c68837629fc5c72eddf583d5da398}{Eliminar\+\_\+\+Producto} (char $\ast$nombre)
+\item 
+void \hyperlink{Funciones_8c_a2fc7494775f8e1ed9938d8020c8d6689}{Nuevo\+\_\+\+Nodo} (\hyperlink{Header_8h_a0459044a77a60acb0e17b56c55281230}{nodo} $\ast$auxiliar)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Funciones.\+c@{Funciones.\+c}!Agregar\+\_\+\+Producto@{Agregar\+\_\+\+Producto}}
+\index{Agregar\+\_\+\+Producto@{Agregar\+\_\+\+Producto}!Funciones.\+c@{Funciones.\+c}}
+\subsubsection[{\texorpdfstring{Agregar\+\_\+\+Producto(char $\ast$nombre, float precio, long int stock)}{Agregar_Producto(char *nombre, float precio, long int stock)}}]{\setlength{\rightskip}{0pt plus 5cm}int Agregar\+\_\+\+Producto (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{nombre, }
+\item[{float}]{precio, }
+\item[{long int}]{stock}
+\end{DoxyParamCaption}
+)}\hypertarget{Funciones_8c_a0f25cf3b659d0725f2d3ebc186541ed3}{}\label{Funciones_8c_a0f25cf3b659d0725f2d3ebc186541ed3}
+Agregar nuevo producto al archivo de listado de productos 
+\begin{DoxyParams}{Parameters}
+{\em nombre} & nombre del nuevo producto \\
+\hline
+{\em precio} & precio \\
+\hline
+{\em stock} & stock disponible \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 1.\+Se agrego el producto 
+\end{DoxyReturn}
+\index{Funciones.\+c@{Funciones.\+c}!Buscar\+\_\+\+Producto@{Buscar\+\_\+\+Producto}}
+\index{Buscar\+\_\+\+Producto@{Buscar\+\_\+\+Producto}!Funciones.\+c@{Funciones.\+c}}
+\subsubsection[{\texorpdfstring{Buscar\+\_\+\+Producto(char $\ast$nombre)}{Buscar_Producto(char *nombre)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item}$\ast$ Buscar\+\_\+\+Producto (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{nombre}
+\end{DoxyParamCaption}
+)}\hypertarget{Funciones_8c_aa3c2c9d160c270ed31ebb1ed255cdfc2}{}\label{Funciones_8c_aa3c2c9d160c270ed31ebb1ed255cdfc2}
+Busca un producto por nombre en el archivo de listado de productos 
+\begin{DoxyParams}{Parameters}
+{\em nombre} & nombre del producto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: devuelve el precio y el stock disponible del prodcuto dentro de una estructura del tipo \char`\"{}item\char`\"{} 
+\end{DoxyReturn}
+\index{Funciones.\+c@{Funciones.\+c}!Create\+\_\+\+User@{Create\+\_\+\+User}}
+\index{Create\+\_\+\+User@{Create\+\_\+\+User}!Funciones.\+c@{Funciones.\+c}}
+\subsubsection[{\texorpdfstring{Create\+\_\+\+User(char $\ast$u, char $\ast$p)}{Create_User(char *u, char *p)}}]{\setlength{\rightskip}{0pt plus 5cm}int Create\+\_\+\+User (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{u, }
+\item[{char $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{Funciones_8c_ae2a0aa4e2abfb43f252200d0d7610a78}{}\label{Funciones_8c_ae2a0aa4e2abfb43f252200d0d7610a78}
+Crear nuevo usuario (no administrador) 
+\begin{DoxyParams}{Parameters}
+{\em u} & nombre de usuario elegido \\
+\hline
+{\em p} & contraseña \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 0. El usuario ya existe -\/1. La clave tiene memos de 6 caracteres o no tiene letra mayuscula y algun numero
+\begin{DoxyEnumerate}
+\item Usuario creado 
+\end{DoxyEnumerate}
+\end{DoxyReturn}
+$<$ variable para contador
+
+$<$ cantidad de mayusculas
+
+$<$ cantidad de minusculas
+
+$<$ cantidad de numeros
+
+abrimos archivo de usuarios en modo lectura
+
+Leemos el archivo (hasta E\+OF) y vamos comparando con el usuario y contraseña pasados como parametros
+
+Vemos si el string de contraseña tiene menos de 6 caracteres
+
+Contamos cuantas mayusculas minusculas y numeros hay en la string de contraseña parametro comparando por A\+S\+C\+II
+
+Si se encontraron mayusculas minusculas y numeros se registrara el nuevo user en el archivo\index{Funciones.\+c@{Funciones.\+c}!Eliminar\+\_\+\+Producto@{Eliminar\+\_\+\+Producto}}
+\index{Eliminar\+\_\+\+Producto@{Eliminar\+\_\+\+Producto}!Funciones.\+c@{Funciones.\+c}}
+\subsubsection[{\texorpdfstring{Eliminar\+\_\+\+Producto(char $\ast$nombre)}{Eliminar_Producto(char *nombre)}}]{\setlength{\rightskip}{0pt plus 5cm}int Eliminar\+\_\+\+Producto (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{nombre}
+\end{DoxyParamCaption}
+)}\hypertarget{Funciones_8c_a3b5c68837629fc5c72eddf583d5da398}{}\label{Funciones_8c_a3b5c68837629fc5c72eddf583d5da398}
+Elimina un producto del archivo de listado de productos 
+\begin{DoxyParams}{Parameters}
+{\em nombre} & nombre del producto a eliminar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 1.\+Se eliminó 
+\end{DoxyReturn}
+\index{Funciones.\+c@{Funciones.\+c}!Log\+\_\+\+In@{Log\+\_\+\+In}}
+\index{Log\+\_\+\+In@{Log\+\_\+\+In}!Funciones.\+c@{Funciones.\+c}}
+\subsubsection[{\texorpdfstring{Log\+\_\+\+In(char $\ast$u, char $\ast$p, int flag)}{Log_In(char *u, char *p, int flag)}}]{\setlength{\rightskip}{0pt plus 5cm}int Log\+\_\+\+In (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{u, }
+\item[{char $\ast$}]{p, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{Funciones_8c_a7411b1e652bab68e2b3b6c3cd724dd10}{}\label{Funciones_8c_a7411b1e652bab68e2b3b6c3cd724dd10}
+logueo de usuario 
+\begin{DoxyParams}{Parameters}
+{\em u} & contiene el nombre de usuario \\
+\hline
+{\em p} & contiene la contraseña \\
+\hline
+{\em flag} & 1. usurio 2. admin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 1. encontro usuario 0. no encontro usuario 
+\end{DoxyReturn}
+$<$ String para usuario
+
+$<$ String para contraseña
+
+$<$ FD para el archivo
+
+Abre archivo \char`\"{}\+Registered\+\_\+\+Users\char`\"{} en modo lectura
+
+Abre archivo \char`\"{}\+Registered\+\_\+admins\char`\"{} en modo lectura
+
+Leemos el archivo que abrimos anteriormente almacenando lo leido en las variables antes declaradas Las comparamos con los parametros pasados Leemos el archivo hasta encontrar el E\+OF (End Of File)\index{Funciones.\+c@{Funciones.\+c}!Modificar\+\_\+\+Producto@{Modificar\+\_\+\+Producto}}
+\index{Modificar\+\_\+\+Producto@{Modificar\+\_\+\+Producto}!Funciones.\+c@{Funciones.\+c}}
+\subsubsection[{\texorpdfstring{Modificar\+\_\+\+Producto(char $\ast$nombre, float precio, long int stock)}{Modificar_Producto(char *nombre, float precio, long int stock)}}]{\setlength{\rightskip}{0pt plus 5cm}int Modificar\+\_\+\+Producto (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{nombre, }
+\item[{float}]{precio, }
+\item[{long int}]{stock}
+\end{DoxyParamCaption}
+)}\hypertarget{Funciones_8c_a15ec9d761dcc3cf972ccdcf652426960}{}\label{Funciones_8c_a15ec9d761dcc3cf972ccdcf652426960}
+Modifica el precio o el stock de un producto en el archivo de listado de productos 
+\begin{DoxyParams}{Parameters}
+{\em nombre} & nombre del producto a modificar \\
+\hline
+{\em precio} & nuevo precio \\
+\hline
+{\em stock} & nuevo stock \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 1.\+Se modifico 0.\+Error, no existe el producto 
+\end{DoxyReturn}
+\index{Funciones.\+c@{Funciones.\+c}!Nuevo\+\_\+\+Nodo@{Nuevo\+\_\+\+Nodo}}
+\index{Nuevo\+\_\+\+Nodo@{Nuevo\+\_\+\+Nodo}!Funciones.\+c@{Funciones.\+c}}
+\subsubsection[{\texorpdfstring{Nuevo\+\_\+\+Nodo(nodo $\ast$auxiliar)}{Nuevo_Nodo(nodo *auxiliar)}}]{\setlength{\rightskip}{0pt plus 5cm}void Nuevo\+\_\+\+Nodo (
+\begin{DoxyParamCaption}
+\item[{{\bf nodo} $\ast$}]{auxiliar}
+\end{DoxyParamCaption}
+)}\hypertarget{Funciones_8c_a2fc7494775f8e1ed9938d8020c8d6689}{}\label{Funciones_8c_a2fc7494775f8e1ed9938d8020c8d6689}
+Crear nuevo nodo de una lista simplemente enlazada 
+\begin{DoxyParams}{Parameters}
+{\em auxiliar} & direccion de comienzo de la lista \\
+\hline
+\end{DoxyParams}
+\index{Funciones.\+c@{Funciones.\+c}!String\+\_\+\+Compare@{String\+\_\+\+Compare}}
+\index{String\+\_\+\+Compare@{String\+\_\+\+Compare}!Funciones.\+c@{Funciones.\+c}}
+\subsubsection[{\texorpdfstring{String\+\_\+\+Compare(char $\ast$s1, char $\ast$s2)}{String_Compare(char *s1, char *s2)}}]{\setlength{\rightskip}{0pt plus 5cm}int String\+\_\+\+Compare (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s1, }
+\item[{char $\ast$}]{s2}
+\end{DoxyParamCaption}
+)}\hypertarget{Funciones_8c_a00aad8f30618c805a748318dbd9513c8}{}\label{Funciones_8c_a00aad8f30618c805a748318dbd9513c8}
+Compara dos strings 
+\begin{DoxyParams}{Parameters}
+{\em s1} & primer string a comparar \\
+\hline
+{\em s2} & segunda string a comparar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 1.\+Iguales 0.\+Distintas 
+\end{DoxyReturn}
+\char`\"{}\+Medimos\char`\"{} el tamaño de la primer string parametro y luego la segunda Sabremos primero si difieren en tamaño Luego si coinciden en tamaño procedemos a comparar caracter por caracter\index{Funciones.\+c@{Funciones.\+c}!String\+\_\+\+Copy@{String\+\_\+\+Copy}}
+\index{String\+\_\+\+Copy@{String\+\_\+\+Copy}!Funciones.\+c@{Funciones.\+c}}
+\subsubsection[{\texorpdfstring{String\+\_\+\+Copy(char $\ast$\+Str\+\_\+\+Inicio, char $\ast$\+Str\+\_\+\+Destino)}{String_Copy(char *Str_Inicio, char *Str_Destino)}}]{\setlength{\rightskip}{0pt plus 5cm}void String\+\_\+\+Copy (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{Str\+\_\+\+Inicio, }
+\item[{char $\ast$}]{Str\+\_\+\+Destino}
+\end{DoxyParamCaption}
+)}\hypertarget{Funciones_8c_afdfd4510823d11359a402a671e32fcd6}{}\label{Funciones_8c_afdfd4510823d11359a402a671e32fcd6}
+Copiar string en otra string 
+\begin{DoxyParams}{Parameters}
+{\em Str\+\_\+\+Inicio} & string a copiar \\
+\hline
+{\em Str\+\_\+\+Destino} & buffer donde se copiara string Inicio \\
+\hline
+\end{DoxyParams}
+Copiamos caracter a caracter hasta encontrar el N\+U\+LL en la string de inicio\index{Funciones.\+c@{Funciones.\+c}!String\+\_\+\+Lenght@{String\+\_\+\+Lenght}}
+\index{String\+\_\+\+Lenght@{String\+\_\+\+Lenght}!Funciones.\+c@{Funciones.\+c}}
+\subsubsection[{\texorpdfstring{String\+\_\+\+Lenght(char $\ast$str)}{String_Lenght(char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}int String\+\_\+\+Lenght (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{Funciones_8c_a1348579deed84307ae6e407c1938152a}{}\label{Funciones_8c_a1348579deed84307ae6e407c1938152a}
+Tamaño de string 
+\begin{DoxyParams}{Parameters}
+{\em str} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: el tamaño de la string 
+\end{DoxyReturn}
+Recorremos la string pasada como parametro hasta encontrar el caracter del N\+U\+LL (\textquotesingle{}\textbackslash{}0\textquotesingle{})
